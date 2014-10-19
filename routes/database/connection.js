@@ -129,7 +129,7 @@ function reviewupdate(callback,placeid,score,COMMENTS,username,userid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '****',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -147,7 +147,7 @@ function fetch(callback){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '****',
 		port: '3306',
 		database: 'cmpe273'
 	});
