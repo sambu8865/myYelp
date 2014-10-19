@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1 style="color:blue;">Yelp</h1><br>
+<form action='/myhome'>
+<h2 style="position:absolute;top:70px;right:120px;">
+<input type="submit" value="Home" name="submit"></input></h2>
+</form>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+
+<table br=1  border:2px style="width:80%">
+
+<% if (results.length) { %>
+<tr style="height:50px"><th>Place Name</th><th>Address</th><th>Phone</th><th>Review</th></tr>
+
+<% results.forEach(function(result) { %>
+<tr>
+<form action='/delete' method="get">
+<td id="pname" style="text-align:center;"><%= result.pname %></td>
+<td style="text-align:center;"><%= result.address1 %><br><%= result.address2 %></td>
+<td style="text-align:center;"><%= result.phone %></td>
+<td style="text-align:center;"><%= result.review %><br><input type = "submit" name="Delete" value = "Delete"/>
+<input type='hidden' value=<%= result.placeid %> name="placeid"></input>
+</form>
+</tr>
+<% }) %>
+<% } else { %>
+<h3>No Places for you</h3>
+<% } %>
+
+</table>
+  </body>
+</html>

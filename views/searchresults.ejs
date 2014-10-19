@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1 style="color:blue;">Yelp</h1><br>
+<div style="font-size:16px;">
+<b>
+<%= category %> results in <%= cityname %><br><br></b>
+</div>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+<table  br=1  border:2px style="width:80%">
+
+<% if (results.length) { %>
+<tr style="height:50px"><th>Place Name</th><th>Address</th><th>Phone</th><th>Review</th></tr>
+<% results.forEach(function(result) { %>
+<tr>
+<form action='/reviewpage' method="get">
+<td id="pname" style="text-align:center;text-transform:capitalize"><%= result.pname %></td>
+<td style="text-align:center;"><%= result.address1 %><br><%= result.address2 %></td>
+<td style="text-align:center;"><%= result.phone %></td>
+<td style="text-align:center;"><%= result.review %><br><input type = "submit" name="Review" value = "Review"/>
+<input type='hidden' value="<%= result.placeid %>" name='placeid'>
+<input type='hidden' value="<%= result.pname %>" name='placename'>
+</form>
+</tr>
+<% }) %>
+<% } else { %>
+<br>No records found
+<% }  %>
+
+</table>
+  </body>
+</html>

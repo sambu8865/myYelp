@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Yelp</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.eclipsesource.jshint.ui.builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.nodeclipse.ui.NodeNature</nature>
+		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>node_modules/express/node_modules/npm-user-validate.js</name>
+			<type>1</type>
+			<location>C:/Program Files/nodejs/node_modules/npm/node_modules/npm-user-validate/npm-user-validate.js</location>
+		</link>
+	</linkedResources>
+</projectDescription>

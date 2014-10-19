@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1 style="color:blue;">Yelp</h1><br>
+<form action='/myhome'>
+<h2 style="position:absolute;top:70px;right:120px;">
+<input type="submit" value="Home" name="submit"></input></h2>
+</form>
+<div style="font-size:16px;">
+<b>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+My Places<br><br>
+</b>
+<table br=1  border:2px style="width:80%">
+
+<% if (results1.length) { %>
+<tr style="height:50px"><th>Place Name</th><th>Address</th><th>Phone</th><th>Review</th></tr>
+
+<% results1.forEach(function(result) { %>
+<tr>
+<form action='/deleteplace' method="get">
+<td id="pname" style="text-align:center;"><%= result.pname %></td>
+<td style="text-align:center;"><%= result.address1 %><br><%= result.address2 %></td>
+<td style="text-align:center;"><%= result.phone %></td>
+<td style="text-align:center;"><%= result.review %><br><input type = "submit" name="Delete" value = "Delete"/>
+<input type='hidden' value=<%= result.placeid %> name="placeid"></input>
+</form>
+</tr>
+<% }) %>
+<% } else { %>
+<p>No Places for you </p>
+<% } %>
+</table><br>
+
+</div>
+
+<div>
+<b><p style="font-size:16px;left:20px">My reviews</p></b>
+</div>
+<table  br=1  border:2px style="width:80%;position:relative;">
+<% if (results.length) { %>
+<tr style="height:50px;position:relative;"><th>Place Name</th><th>Address</th><th>Review</th><th>Comment</th></tr><br>
+
+<% results.forEach(function(result) { %>
+<tr>
+<form action='/deletereview' method="get">
+<td id="pname" style="text-align:center;"><%= result.pname %></td>
+<td style="text-align:center;"><%= result.address1 %><br><%= result.address2 %></td>
+<td style="text-align:center;"><%= result.score %></td>
+<td style="text-align:right;"><%= result.comments %></span>&nbsp&nbsp <input  type = "submit" name="Delete" value = "Delete"/>
+<input type='hidden' value=<%= result.reviewid %> name="reviewid"></input>
+</form>
+</tr>
+<% }); %>
+<% } else { %>
+<br>No reviews
+<% } %>
+
+</table><br>
+
+</body>
+</html>

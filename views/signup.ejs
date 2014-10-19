@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <div>
+	<h2>Please fill in your details</h2>
+	<form  action="/signedup" method="post">
+    <div>
+    <input name="fullname" type="text" placeholder="Full Name"><span style="color:red"><%= error_name %></span><br>
+    <input name="email" type="text" placeholder="Email"><span style="color:red"><%= error_email %></span><br>
+    <input name="phonenumber" type="text"  maxlength="10" placeholder="Phone Number"><span style="color:red"><%= error_phone %></span><br>
+    <input name="password" type="password" placeholder="password"><span style="color:red"><%= error_pwd %></span><br>
+    <button name="Submit" type="submit" value="Submit">Submit</button>
+  </div>
+  </form>
+  </body>
+</html>
