@@ -3,7 +3,7 @@ function validate(callback,userName,password){
 	var db = mysql.createConnection({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '*****',
 		port: '3306',
 		database: 'cmpe273'
 		});
@@ -27,7 +27,7 @@ function signup(callback,fullname,email,phone,password){
 	var db = mysql.createConnection({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '****',
 		port: '3306',
 		database: 'cmpe273'
 		});
@@ -53,7 +53,7 @@ function addplace(callback,pname,cname,address1,address2,phone,category,username
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '****',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -108,7 +108,7 @@ function searchplaces(callback, category, cityname){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '****',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -168,7 +168,7 @@ function fetchplaces(callback,username,userid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '***',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -189,7 +189,7 @@ function myreviews(callback,username,results,userid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '***',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -209,7 +209,7 @@ function deleteplaces(callback,placeid,username,userid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '***',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -238,7 +238,7 @@ function deleteplace(callback,placeid,username,userid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '***',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -256,7 +256,7 @@ function deletereview(callback,reviewid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '***',
 		port: '3306',
 		database: 'cmpe273'
 	});
@@ -274,7 +274,7 @@ function fetchreviews(callback,placeid){
 	var db = mysql.createConnection ({
 		host: 'localhost',
 		user: 'root',
-		password: 'password',
+		password: '***',
 		port: '3306',
 		database: 'cmpe273'
 	});
